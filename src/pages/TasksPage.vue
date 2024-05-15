@@ -35,7 +35,8 @@
     import NewTask from "../components/tasks/NewTask.vue";
 
     const store = useTaskStore()
-    const { task } = storeToRefs(store)
+    // const { task } = storeToRefs(store)
+    const { completed, uncompleted, uncompletedCount } = storeToRefs(store)
     // store.task.name = "First task is already updated"
     // store.task.is_completed = true
     // store.$patch({
@@ -54,7 +55,10 @@
         // tasks.value = data.data.filter(task => task.is_completed)
         // console.log(store.task)
         // console.log(task)
-        console.log(task.value)
+        // console.log(task.value)
+        console.log(completed.value)
+        console.log(uncompleted.value)
+        console.log(uncompletedCount.value)
     })
 
     const uncompletedTasks = computed(() => tasks.value.filter(task => !task.is_completed))
