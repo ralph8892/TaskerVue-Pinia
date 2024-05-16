@@ -18,8 +18,6 @@
         is_completed: false
     })
 
-    // const emit = defineEmits(['added'])
-
     const addNewTask = async(event) => {
         if (event.target.value.trim()) {
             newTask.name = event.target.value
