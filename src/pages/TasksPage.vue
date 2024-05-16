@@ -42,6 +42,7 @@
 
     // Getters V2
     const { completedTasks, uncompletedTasks } = storeToRefs(store)
+    const { fetchAllTasks } = store
     // store.task.name = "First task is already updated"
     // store.task.is_completed = true
     // store.$patch({
@@ -57,7 +58,7 @@
     onMounted(async () => {
         // const { data } = await allTasks()
         // tasks.value = data.data
-        await store.fetchAllTasks()
+        await fetchAllTasks()
         // tasks.value = data.data.filter(task => task.is_completed)
         // console.log(store.task)
         // console.log(task)
