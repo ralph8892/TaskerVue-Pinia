@@ -36,7 +36,8 @@
 
     const store = useTaskStore()
     // const { task } = storeToRefs(store)
-    const { completed, uncompleted, uncompletedCount } = storeToRefs(store)
+    // const { completed, uncompleted, uncompletedCount } = storeToRefs(store)
+    const { completedTasks, uncompletedTasks } = storeToRefs(store)
     // store.task.name = "First task is already updated"
     // store.task.is_completed = true
     // store.$patch({
@@ -56,13 +57,13 @@
         // console.log(store.task)
         // console.log(task)
         // console.log(task.value)
-        console.log(completed.value)
-        console.log(uncompleted.value)
-        console.log(uncompletedCount.value)
+        // console.log(completed.value)
+        // console.log(uncompleted.value)
+        // console.log(uncompletedCount.value)
     })
 
-    const uncompletedTasks = computed(() => tasks.value.filter(task => !task.is_completed))
-    const completedTasks = computed(() => tasks.value.filter(task => task.is_completed))
+    // const uncompletedTasks = computed(() => tasks.value.filter(task => !task.is_completed))
+    // const completedTasks = computed(() => tasks.value.filter(task => task.is_completed))
     const showToggleCompletedBtn = computed(() => uncompletedTasks.value.length > 0 && completedTasks.value.length > 0)
     const completedTasksIsVisible = computed(() => uncompletedTasks.value.length === 0 || completedTasks.value.length > 0)
     const showCompletedTasks = ref(false)
