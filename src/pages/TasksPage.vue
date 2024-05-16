@@ -55,8 +55,9 @@
     const tasks = ref([])
 
     onMounted(async () => {
-        const { data } = await allTasks()
-        tasks.value = data.data
+        // const { data } = await allTasks()
+        // tasks.value = data.data
+        await store.fetchAllTasks()
         // tasks.value = data.data.filter(task => task.is_completed)
         // console.log(store.task)
         // console.log(task)
