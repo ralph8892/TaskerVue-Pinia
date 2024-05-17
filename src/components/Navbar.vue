@@ -12,7 +12,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">  
-                        <a href="#" class="nav-link">Tasks</a>
+                        <router-link :to="{ name: 'tasks' }" class="nav-link">Tasks</router-link>
                     </li>
                     <li class="nav-item">  
                         <a href="#" class="nav-link">Summary</a>
@@ -22,11 +22,11 @@
                 <ul class="navbar-nav ms-auto">
                     
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Login</a>
+                        <router-link :to="{ name: 'login' }" class="nav-link">Login</router-link>
                             
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Register</a>
+                        <router-link :to="{ name: 'register' }" class="nav-link">Register</router-link>
                     </li>
                     
                     <li class="nav-item">
